@@ -78,16 +78,10 @@ const Header = () => {
 
       <div className="navbar-right">
         <ul>
-          <li
-            className={styles['navbar-email']}
-            onClick={handleToggle}
-          >
+          <li className={styles['navbar-email']} onClick={handleToggle}>
             email@example.com
           </li>
-          <li
-            className={styles['navbar-shopping-cart']}
-            onClick={handleToggleOrders}
-          >
+          <li className={styles['navbar-shopping-cart']} onClick={handleToggleOrders}>
             <Image src={iconShoppingCart} alt="shopping cart" />
             {cart.length > 0 ? <div>{verifyCart(cart.length)}</div> : null}
           </li>
@@ -97,6 +91,6 @@ const Header = () => {
       {toggle ? <Menu /> : null}
     </nav>
   );
-}
+};
 
 export default Header;
