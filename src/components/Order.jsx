@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import flechita from '@icons/flechita.svg';
 
-import styles from '@styles/Order.scss';
+import styles from '@styles/Order.module.scss';
 
 const Order = () => {
   return (

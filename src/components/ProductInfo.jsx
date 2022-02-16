@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import addToCart from '@icons/bt_add_to_cart.svg';
 
-import styles from '@styles/ProductInfo.scss';
+import styles from '@styles/ProductInfo.module.scss';
 
 const ProductInfo = () => {
   return (

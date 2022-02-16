@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Image from 'next/image';
 
 import AppContext from '@context/AppContext';
 import OrderItem from '@components/OrderItem';
@@ -23,7 +24,7 @@ const Checkout = () => {
       {console.log(cart)}
       <div className={styles['Checkout-container']}>
         <div className={styles['title-container']}>
-          <img src={flechita} alt="arrow" />
+          <Image src={flechita} alt="arrow" />
           <h1 className={styles.title}>My order</h1>
         </div>
         <div className={styles['Checkout-content']}>

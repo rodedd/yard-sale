@@ -6,10 +6,10 @@ import ProductList from '@containers/ProductList';
 const Home = () => {
   return (
     <>
-    <Header />
-    <ProductList />
+      <Header />
+      <ProductList />
     </>
   );
-}
+};
 
 export default Home;

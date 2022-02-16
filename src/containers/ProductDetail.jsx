@@ -5,7 +5,7 @@ import ProductInfo from '@components/ProductInfo';
 
 import close from '@icons/icon_close.png';
 
-import styles from '@styles/ProductDetail.scss';
+import styles from '@styles/ProductDetail.module.scss';
 
 const ProductDetail = () => {
   return (
