@@ -1,0 +1,62 @@
+@import 'vars';
+
+.MenuMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+  padding: 24px;
+
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid $--very-light-pink;
+  animation: appear 0.26s ease;
+  z-index: 3;
+}
+.MenuMobile .icon-close {
+  align-self: flex-end;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.MenuMobile a {
+  text-decoration: none;
+  color: $--black;
+  font-weight: bold;
+  /* margin-bottom: 24px; */
+}
+.MenuMobile ul {
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+.MenuMobile ul:nth-child(1) {
+  border-bottom: 1px solid $--very-light-pink;
+}
+.MenuMobile ul li {
+  margin-bottom: 24px;
+}
+.email {
+  font-size: $--sm;
+  font-weight: 300 !important;
+}
+.sign-out {
+  font-size: $--sm;
+  color: $--hospital-green !important;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
