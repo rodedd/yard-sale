@@ -12,6 +12,7 @@
 
   border-bottom: 1px solid $--very-light-pink;
   background-color: $--white;
+  z-index: 1;
 }
 .Header .menu {
   display: none;
@@ -33,6 +34,7 @@
 }
 .Header .navbar-left {
   display: flex;
+  align-items: center;
 }
 .Header .navbar-left ul {
   margin-left: 12px;
@@ -53,7 +55,7 @@
 .Header .navbar-email {
   color: $--very-light-pink;
   font-size: $--sm;
-  margin-right: 12px;
+  margin-right: 20px;
   cursor: pointer;
 }
 .Header .navbar-shopping-cart {

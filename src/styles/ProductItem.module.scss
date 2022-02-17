@@ -15,15 +15,11 @@
   align-items: center;
   margin-top: 12px;
 }
-.product-info figure {
-  margin: 0;
-}
-.product-info figure img {
+.product-info .add-to-cart {
   width: 35px;
   height: 35px;
-
+  border-radius: 20px;
   box-shadow: 1px 0px 15px -5px rgba(0, 0, 0, 0.2);
-
   cursor: pointer;
 }
 .product-info div p:nth-child(1) {

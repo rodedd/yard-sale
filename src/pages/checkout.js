@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
+import Head from 'next/head';
 
 import AppContext from '@context/AppContext';
 import OrderItem from '@components/OrderItem';
@@ -20,27 +21,34 @@ const Checkout = () => {
   };
 
   return (
-    <div className={styles.Checkout}>
-      {console.log(cart)}
-      <div className={styles['Checkout-container']}>
-        <div className={styles['title-container']}>
-          <Image src={flechita} alt="arrow" />
-          <h1 className={styles.title}>My order</h1>
-        </div>
-        <div className={styles['Checkout-content']}>
-          <div className={styles.order}>
-            <p>
-              <span>{today}</span>
-              <span>{cart.length} articles</span>
-            </p>
-            <p>${sumTotal()}</p>
+    <>
+      <Head>
+        <title>Checkout</title>
+      </Head>
+      <div className={styles.Checkout}>
+        {console.log(cart)}
+        <div className={styles['Checkout-container']}>
+          <div className={styles['title-container']}>
+            <div className={styles['back-arrow']}>
+              <Image layout='fill' src={flechita} alt="arrow" />
+            </div>
+            <h1 className={styles.title}>My order</h1>
           </div>
+          <div className={styles['Checkout-content']}>
+            <div className={styles.order}>
+              <p>
+                <span>{today}</span>
+                <span>{cart.length} articles</span>
+              </p>
+              <p>${sumTotal()}</p>
+            </div>
+          </div>
+          {cart.map((product) => (
+            <OrderItem product={product} key={`orderItem-${product.id}`} />
+          ))}
         </div>
-        {cart.map((product) => (
-          <OrderItem product={product} key={`orderItem-${product.id}`} />
-        ))}
       </div>
-    </div>
+    </>
   );
 };
 

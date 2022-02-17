@@ -1,13 +1,5 @@
 @import 'vars';
 
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
 .MyOrder {
   width: 360px;
   padding: 24px;
@@ -21,13 +13,14 @@
   border: 1px solid $--very-light-pink;
   animation: appear 0.26s ease;
   max-height: 90vh;
+  z-index: 1;
 }
 .title-container {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
-.title-container img {
+.title-container .back-arrow {
   width: 20px;
   height: 20px;
   transform: rotate(180deg);
@@ -82,5 +75,14 @@
 @media (max-width: 640px) {
   .MyOrder {
     width: 100%;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
   }
 }

@@ -9,7 +9,9 @@ import styles from '@styles/MenuMobile.module.scss';
 const MenuMobile = ({ handleToggleMenu }) => {
   return (
     <div className={styles.MenuMobile}>
-      <Image src={iconClose} alt="icon close" className="icon-close" onClick={handleToggleMenu} />
+      <div className={styles['icon-close']}>
+        <Image src={iconClose} alt="icon close" onClick={handleToggleMenu} width={20} height={20} />
+      </div>
       <ul>
         <li>
           <Link href="/">CATEGORIES</Link>

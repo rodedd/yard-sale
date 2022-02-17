@@ -17,11 +17,11 @@ const OrderItem = ({ product }) => {
   return (
     <div className={styles.OrderItem}>
       <figure>
-        <Image src={product?.images[0]} alt={product.title} />
+        <Image src={product.images[0]} alt={product.title} width={70} height={70} />
       </figure>
-      <p>{product?.title}</p>
-      <p>${product?.price}</p>
-      <Image src={iconClose} alt="close" onClick={() => handleRemove(product)} />
+      <p>{product.title}</p>
+      <p>${product.price}</p>
+      <Image src={iconClose} alt="close" onClick={() => handleRemove(product)} className={styles['close-icon']} />
     </div>
   );
 };

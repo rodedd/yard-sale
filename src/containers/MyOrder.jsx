@@ -22,7 +22,9 @@ const MyOrder = ({ toggleOrders, setToggleOrders }) => {
   return (
     <aside className={styles.MyOrder}>
       <div className={styles['title-container']}>
-        <Image src={flechita} alt="arrow" onClick={() => setToggleOrders(!toggleOrders)} />
+        <div className={styles['back-arrow']}>
+          <Image layout='fill' src={flechita} alt="arrow" onClick={() => setToggleOrders(!toggleOrders)} />
+        </div>
         <p className={styles.title}>My order</p>
       </div>
       <div className={styles['my-order-content']}>
@@ -37,9 +39,11 @@ const MyOrder = ({ toggleOrders, setToggleOrders }) => {
         </p>
         <p>${sumTotal()}</p>
       </div>
-      <Link className={styles['primary-button']} href="/checkout">
-        Checkout
-      </Link>
+      <button className={styles['primary-button']}>
+        <Link href="/checkout">
+          Checkout
+        </Link>
+      </button>
     </aside>
   );
 };

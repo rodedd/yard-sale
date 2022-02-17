@@ -8,13 +8,27 @@
 }
 .title {
   font-size: var(--lg);
-  margin-bottom: 40px;
 }
 .Checkout-container {
   display: grid;
   grid-template-rows: auto 1fr auto;
   width: 300px;
 }
+
+.title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title-container .back-arrow {
+  width: 16px;
+  height: 16px;
+  transform: rotate(180deg);
+  margin-right: 14px;
+  cursor: pointer;
+}
+
 .Checkout-content {
   display: flex;
   flex-direction: column;
